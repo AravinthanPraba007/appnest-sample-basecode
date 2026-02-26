@@ -1,12 +1,9 @@
 {
-  "name": "app-backend",
+  "name": "app-installation-frontend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "peerDependencies": {
-    "@aravinthan_p/appnest-sdk-utils": "^1.0.0"
   },
   "keywords": [],
   "author": "",
