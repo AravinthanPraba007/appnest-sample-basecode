@@ -1,5 +1,5 @@
 const { onContactCreate, onSubmissionComplete } = require('./eventFunction');
-const { function1, function2 } = require('./smiFunction');
+const { function1, function2 } = require('./apiFunction');
 
 module.exports = {
   onContactCreate,

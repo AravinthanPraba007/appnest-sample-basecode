@@ -7,6 +7,20 @@ function App() {
 
   const [count, setCount] = useState(0);
 
+  const handleCheckBackend = async () => {
+    try {
+      const result = await window.appnestClientFunctions.appBackend.invoke({
+        apiFunctionName: 'function1',
+        payload: {
+          message: 'Hello from frontend!',
+        },
+      });
+      console.log('Backend response:', result);
+    } catch (err) {
+      console.error('Backend invoke error:', err);
+    }
+  };
+
   return (
     <>
       <div>
@@ -21,6 +35,9 @@ function App() {
       <div className='card'>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
+        </button>
+        <button onClick={handleCheckBackend}>
+          Check Backend API
         </button>
         <p>
           Edit <code>src/AppMain.jsx</code> and save to test HMR
