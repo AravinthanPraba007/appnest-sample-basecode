@@ -8,5 +8,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@sparrowengg/twigs-react": "*",
+    "@sparrowengg/twigs-react-icons": "*"
+  }
 }
