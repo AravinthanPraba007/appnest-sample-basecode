@@ -12,15 +12,6 @@ const onSubmissionComplete = async ({ payload }) => {
   };
 };
 
-const onSubmissionComplete1 = async ({ payload }) => {
-  console.log('Submission1 completed with data:', payload);
-  await AppnestFunctions
-  return new ResultData({
-    body: { message: 'Submission1 completed is not open for access' },
-    statusCode: 401,
-  });
-};
-
 const onContactCreate = async ({ payload }) => {
   console.log('Contact created with data:', payload);
   await AppnestFunctions.$db.string.create({
@@ -35,5 +26,5 @@ const onContactCreate = async ({ payload }) => {
   };
 };
 
-module.exports = { onSubmissionComplete, onContactCreate, onSubmissionComplete1 };
+module.exports = { onSubmissionComplete, onContactCreate };
 
